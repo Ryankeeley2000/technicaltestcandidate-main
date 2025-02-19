@@ -23,7 +23,7 @@ builder.Services.AddCors(options =>
 });
 
 // DI
-//builder.Services.AddScoped<IPasswordService, PasswordService>();
+builder.Services.AddScoped<IPasswordService, PasswordService>();
 
 var app = builder.Build();
 

@@ -25,9 +25,9 @@ public class PasswordController : ControllerBase
         if (_passwordService.IsPasswordInvalid(request.Password) ||
             _passwordService.IsPasswordCommon(request.Password))
         {
-            return BadRequest();
+            return BadRequest("Password is too weak or common.");
         }
 
-        return Ok();
+        return Ok("Password accepted.");
     }
 }
