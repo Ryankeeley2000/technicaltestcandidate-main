@@ -11,7 +11,9 @@ public class PasswordService : IPasswordService
 
     public bool IsPasswordInvalid(string password)
     {
-        return string.IsNullOrWhiteSpace(password) || password.Length < 8;
+        return string.IsNullOrWhiteSpace(password) || password.Length < 7;
+
+        //here I would do a look up to make sure the new password isn't the same as the users old password using a hash of both
     }
 
     public bool IsPasswordCommon(string password)
